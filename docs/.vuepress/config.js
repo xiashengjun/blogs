@@ -1,3 +1,5 @@
+// const moment = require('moment');
+// moment.locale('zh-cn')
 module.exports = {
   title:"七分熟",
   description:"七分熟的第一个博客",
@@ -15,5 +17,18 @@ module.exports = {
       { text: '留言', link: '/words/' }
     ],
     logo: '/assets/img/logo.png',
-  }
+  },
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp,lang) => {
+          // 不要忘了安装 moment
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow("LLLL")
+        }
+      }
+    ]
+  ]
 }

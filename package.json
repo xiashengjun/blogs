@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/xiashengjun/blogs/issues"
   },
-  "homepage": "https://github.com/xiashengjun/blogs#readme"
+  "homepage": "https://github.com/xiashengjun/blogs#readme",
+  "dependencies": {
+    "moment": "^2.25.3"
+  }
 }
