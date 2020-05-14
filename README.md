@@ -1,2 +1,1 @@
-# blogs
-我的博客
+# Hello VuePress!

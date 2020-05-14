@@ -1,0 +1,21 @@
+{
+  "name": "blogs",
+  "version": "1.0.0",
+  "description": "我的博客",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiashengjun/blogs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiashengjun/blogs/issues"
+  },
+  "homepage": "https://github.com/xiashengjun/blogs#readme"
+}
