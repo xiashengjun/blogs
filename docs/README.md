@@ -1,9 +1,10 @@
 ---
 home: true
-heroImage: /hero.png
-heroText: Hero 标题
-tagline: Hero 副标题
-actionText: 快速上手 →
+title: 七分熟
+heroImage: /assets/img/logo.png
+heroText: 个人博客
+tagline: Is to save every day until eternity passes away.
+actionText: Let's go ! →
 actionLink: /zh/guide/
 features:
 - title: 简洁至上
