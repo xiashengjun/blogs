@@ -1,5 +1,4 @@
-// const moment = require('moment');
-// moment.locale('zh-cn')
+const moment = require('moment');
 module.exports = {
   title:"七分熟",
   description:"七分熟的第一个博客",
@@ -22,11 +21,11 @@ module.exports = {
     [
       '@vuepress/last-updated',
       {
-        transformer: (timestamp,lang) => {
+        transformer: (timestamp) => {
           // 不要忘了安装 moment
-          const moment = require('moment')
-          moment.locale(lang)
-          return moment(timestamp).fromNow("LLLL")
+          // const moment = require('moment')
+          moment.locale("zh-cn")
+          return moment(timestamp).format("LL")
         }
       }
     ]
