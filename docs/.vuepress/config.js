@@ -29,6 +29,10 @@ module.exports = {
             text: 'Node',
             link: '/node/'
           },
+          {
+            text: 'Git',
+            link: '/git/'
+          }
         ]
       },
       {
