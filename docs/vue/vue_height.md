@@ -1,8 +1,8 @@
 ---
-title: （二）vue的高级特性
+title: （二）Vue的高级特性
 ---
 
-# vue的进阶
+# Vue的进阶
 
 ## 自定义v-model
 
