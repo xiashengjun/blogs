@@ -1,73 +1,10 @@
 ---
-title: （一）echarts的基本配置
+title: 官网
 ---
-![avatar](/assets/img/配置.png)
-# echarts的基本配置
 
-## 1.tooltip
-> 提示框组件
-> >trigger触发方式
+# 介绍
+>ECharts，缩写来自Enterprise Charts，商业级数据图表，一个纯Javascript的图表库，可以流畅的运行在PC和移动设备上，兼容当前绝大部分浏览器（IE6/7/8/9 /10/11，chrome，firefox，Safari等），底层依赖轻量级的Canvas类库ZRender，提供直观，生动，可交互，可高度个性化定制的数据可视化图表。创新的拖拽重计算、数据视图、值域漫游等特性大大增强了用户体验，赋予了用户对数据进行挖掘、整合的能力。
 
-## 2.legend
-> 图例组件
-> `legend:{
-          type:'plain',
-          data:['销量1','销量2']
-        }
-        `
-> 当series中有name值的时候，legend没有data值也会显示图例组件
+>支持折线图（区域图）、柱状图（条状图）、散点图（气泡图）、K线图、饼图（环形图）、雷达图（填充雷达 图）、和弦图、力导向布局图、地图、仪表盘、漏斗图、事件河流图等12类图表，同时提供标题，详情气泡、图例、值域、数据区域、时间轴、工具箱等7个可交 互组件，支持多图表、组件的联动和混搭展现。
 
-## 3.toolbox
-> 工具箱组件
-> >可以实现另存为图片等功能
-> >feature:{
-> >   saveAsImage:{}
-> > }
-
-## 4.grid
-> 网格配置
-> 修改图表大小
-> 
-` grid:{
-          left:'0%',
-          top:"20px",
-          right:"0%",
-          bottom:"4%",
-          containLabel:true
-        }`
-
-## 5.xAxis
-> `splitLine: {
-            lineStyle: {
-              color: "#317198"
-            }
-          },
-          axisLine: {
-            show: true,
-            lineStyle: {
-              color: "#317198"
-            }`
-> > x轴标轴和x轴折线的样式
-
-> ` axisLabel: {
-            color: "#5FD3F9",
-            padding: 5,
-            fontSize: 16,
-            padding:10,
-            backgroundColor:{
-              image:require('../../assets/img/smallbox/下载.png')
-            }
-          }`
-
-## 6.title
-> `title:{
-          text:'我的Echarts',
-          left:'middle'
-        }`
-
-## 7.让图表跟随屏幕自适应
-```markup
- window.addEventListener("resize",function(){
-        mychart.resize();
-      })
-```
+[echarts官网](https://echarts.apache.org/examples/zh/index.html)

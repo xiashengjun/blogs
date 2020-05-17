@@ -3,7 +3,7 @@ title: （一）vue的基本使用
 ---
 # Vue入门
 
-## Vue引用
+## 1.Vue引用
 
 ```markup
 <!-- 开发环境版本，包含了有帮助的命令行警告 -->
@@ -13,7 +13,7 @@ title: （一）vue的基本使用
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 ```
 
-## vue基本代码结构
+## 2.vue基本代码结构
 
 ```markup
 <div id="app">
@@ -227,7 +227,7 @@ var vm = new Vue({
 ```
 
 
-## 在vue中使用样式
+## 3.在vue中使用样式
 
 ### 使用class样式
 
@@ -296,7 +296,7 @@ var vm = new Vue({
    <h1 :style="[h1StyleObj,h1StyleObj2]">this is a eval h1</h1>
    ```
 
-   ## vue指令
+   ## 4.vue指令
 
 ### v-for与key属性
 
@@ -349,7 +349,7 @@ var vm = new Vue({
 </script>
 ```
 
-## 案例: 使用vue实现品牌新增,删除以及关键字搜索和时间处理
+## 5.案例: 使用vue实现品牌新增,删除以及关键字搜索和时间处理
 
 ```markup
 <div id="app">
@@ -477,7 +477,7 @@ var vm = new Vue({
 ```
 
 
-## vue-devtools安装
+## 6.vue-devtools安装
 
 > 推荐翻墙安装,搜索`Vue.js devtools`
 >
@@ -485,7 +485,7 @@ var vm = new Vue({
 >
 > vue扩展程序需要勾选允许访问文件网址和收集各项错误;同时引入的vue.js不能使用min.js
 
-## 过滤器
+## 7.过滤器
 
 > vue.js允许自定义过滤器,可被用作一些常见文本格式化.过滤器可以用在两个地方:`mustache插值`和`v-bind表达式`.过滤器应该被添加在js表达式的尾部,由"管道"符指示
 
@@ -533,7 +533,7 @@ filters: {
 </script>
 ```
 
-## 自定义按键修饰符
+## 8.自定义按键修饰符
 
 * 1.x中自定义键盘修饰符\(了解不推荐\)
 
@@ -554,7 +554,7 @@ Vue.config.keyCodes.f2 = 113;
 <input type="text" v-model="name" @keyup.f2="add">
 ```
 
-## 自定义指令
+## 9.自定义指令
 
 > 参数1：指令的名称,在定义的时候不需要加v-前缀,在调用的时候,必须加上v-前缀
 >
@@ -611,7 +611,7 @@ Vue.directive('color-swatch', function (el, binding) {
 })
 ```
 
-## vue实例的生命周期
+## 10.vue实例的生命周期
 
 * 什么是生命周期:从vue实例创建,运行到销毁期间,总是伴随着各种各样的事件,这些事件统称为生命周期
 * 生命周期钩子: 生命周期事件的别名
@@ -675,7 +675,7 @@ Vue.directive('color-swatch', function (el, binding) {
     })
 </script>
 ```
-## Vue路由
+## 11.Vue路由
 
 ### 什么是路由
 
@@ -890,7 +890,7 @@ var vm = new Vue({
 ```
 
 
-## Vue监视
+## 12.Vue监视
 
 ### 案例: watch监视名称改变
 
@@ -953,7 +953,7 @@ var vm = new Vue({
 </script>
 ```
 
-## computed计算属性
+## 13.computed计算属性
 
 ```markup
 <script>
@@ -977,7 +977,7 @@ var vm = new Vue({
 </script>
 ```
 
-## vue render渲染
+## 14.vue render渲染
 
 ```markup
 <div id="app">
@@ -1149,7 +1149,7 @@ var vm = new Vue({
 })
 ```
 
-## vuex
+## 15.vuex
 
 > vuex是vue配套的公共数据管理工具,可以把一些共享的数据,保存到vuex中,方便整个程序中的任何组件直接获取或修改我们的公共数据
 

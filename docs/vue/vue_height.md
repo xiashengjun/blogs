@@ -4,7 +4,7 @@ title: （二）Vue的高级特性
 
 # Vue的进阶
 
-## 自定义v-model
+## 1.自定义v-model
 
 ```markup
 <input
@@ -22,7 +22,7 @@ title: （二）Vue的高级特性
   }
   ```
 
-## $nextTick
+## 2.$nextTick
 
 > nextTick()，是将回调函数延迟在下一次dom更新数据后调用，简单的理解是：当数据更新了，在dom中渲染后，自动执行该函数
 
@@ -34,7 +34,7 @@ title: （二）Vue的高级特性
 > Vue.nextTick(callback) 使用原理：
 > > 原因是，Vue是异步执行dom更新的，一旦观察到数据变化，Vue就会开启一个队列，然后把在同一个事件循环 (event loop) 当中观察到数据变化的 watcher 推送进这个队列。如果这个watcher被触发多次，只会被推送到队列一次。这种缓冲行为可以有效的去掉重复数据造成的不必要的计算和DOm操作。而在下一个事件循环时，Vue会清空队列，并进行必要的DOM更新
 
-## slot
+## 3.slot
 > 基本使用
 ```markup
 <div><slot name="header">
@@ -68,7 +68,7 @@ slot的默认内容
  </Home>
  ```
 
- ## 动态、异步组件
+ ## 4.动态、异步组件
 > 动态组件
 > > `<component :is="组件名" />`
 > 
@@ -79,7 +79,7 @@ slot的默认内容
 > > 异步组件：用到组件时，组件才显示
 > > > const Home = () => import('@/components/Home')
 
-## keep-alive
+## 5.keep-alive
 > 作用：
 > > 1.缓存组件
 > > 2.组件频繁切换，不需要重复渲染，不会重复创建和销毁
@@ -90,7 +90,7 @@ slot的默认内容
 </keep-alive>
 ```
 
-## mixin
+## 6.mixin
 > 多个组件有相同的逻辑，抽离出来
 > 多个mixin可能会造成命名冲突
 > mixin和组件可能会出现多对多的关系，复杂度较高

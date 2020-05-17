@@ -7,8 +7,8 @@ tagline: Is to save every day until eternity passes away.
 actionText: Let's go ! →
 actionLink: /vue/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+- title: 记录
+  details: 在我们的职业生涯中，需要与时俱进，不断地去学习新的的技术，那么记录对我们而言就非常重要了。
 - title: Vue驱动
   details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
 - title: 高性能
