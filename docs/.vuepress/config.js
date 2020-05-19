@@ -26,8 +26,8 @@ module.exports = {
             link: '/echarts/'
           },
           {
-            text: 'Node',
-            link: '/node/'
+            text: '微信小程序',
+            link: '/wx/'
           },
           {
             text: 'Git',
