@@ -9,9 +9,9 @@ actionLink: /vue/
 features:
 - title: 记录
   details: 在我们的职业生涯中，需要与时俱进，不断地去学习新的的技术，那么记录对我们而言就非常重要了。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: 共享
+  details: 技术是永无止境的，我们需要不停的去学习，而分享我们的学习成果是非常非常有利于我们互相学习的。
+- title: 共同进步
+  details: 开发生涯是比较漫长的，有诸位志同道合的朋友是我的荣幸，希望我们能够互相交流，共同进步。
 footer: MIT Licensed | Copyright © 2020-present Xia Sheng Jun
 ---
