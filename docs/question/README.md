@@ -77,3 +77,47 @@ deactivated|keep-alive 专属，组件被销毁时调用
 v-show 不管条件是什么，内容总是会被渲染，只是简单基于CSS的”display“属性的进行切换。
 v-if  是真正的条件渲染，在组件的创建建和销毁之间切换。
 如果不需要频繁切换条件用v-if，需要频繁切换条件的场景使用v-show。
+
+## 10.Vue的响应式
+
+### 核心API - Object.defineProperty
+
+```markup
+//重新定义属性，需要监听起来
+function defineReactive(target,key,value){
+   //深度监听
+   observer(value)
+
+   //核心API
+   Object.defineProperty(target,key,{
+      get(){
+         return value
+      },
+      set(newValue){
+         if(newValue != value){
+            //设置新值
+            //注意：value 一直在闭包中
+            value = newValue
+
+            //触发更新视图
+            updateView()
+         }
+      }
+   })
+}
+```
+
+### Object.defineProperty的一些缺点（Vue3.0启用Proxy）
+* 深度监听，需要递归到底，一次性计算量大。
+* 无法监听新增属性/删除属性（Vue.Set Vue.delete—）。
+* 无法原生监听数组，需要特殊处理。（Object.create(Array.prototype)）
+
+## 11.简述vdom和diff算法
+* 用JS模拟DOM结构，计算出最小的变更，操作DOM
+
+### diff算法将vdom的时间复杂度从O(n^3)优化到O(n)
+* 只比较同一层级，不跨级比较
+* tag不相同，则直接删掉重建，不再深度比较
+* tag和key，两者都相同，则认为是相同节点，不再深度比较
+
+## 
