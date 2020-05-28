@@ -21,6 +21,7 @@ title: Vue相关面试题
     {{index}} - {{key}} - {{val.title}}
     </li>
 ```
+
 ## 5.props和$emit
 
 > this.$emit("方法名",data)
@@ -108,16 +109,17 @@ function defineReactive(target,key,value){
 ```
 
 ### Object.defineProperty的一些缺点（Vue3.0启用Proxy）
+
 * 深度监听，需要递归到底，一次性计算量大。
 * 无法监听新增属性/删除属性（Vue.Set Vue.delete—）。
 * 无法原生监听数组，需要特殊处理。（Object.create(Array.prototype)）
 
 ## 11.简述vdom和diff算法
+
 * 用JS模拟DOM结构，计算出最小的变更，操作DOM
 
 ### diff算法将vdom的时间复杂度从O(n^3)优化到O(n)
+
 * 只比较同一层级，不跨级比较
 * tag不相同，则直接删掉重建，不再深度比较
 * tag和key，两者都相同，则认为是相同节点，不再深度比较
-
-## 
