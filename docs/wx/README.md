@@ -1,8 +1,11 @@
-# 微信小程序基础
+--- 
+title: （一）微信小程序基础
+---
+
 
 > 开发前期准备工作不描述\(申请appid,下载开发工具...\)
 
-## 小程序结构
+## 1.小程序结构
 
 ### 小程序开发主要部分
 
@@ -10,6 +13,7 @@
 * 页面样式: wxss =&gt; 类似css\(部分支持,部分增强\)
 * 页面脚本: js+wxss
 * 目录结构
+
    ```markup
     project
     ├── pages
@@ -88,7 +92,7 @@ ctrl+shift+p
 * 大小写敏感
 * div=&gt;view;span=&gt;text
 
-## app.json文件的配置
+## 3.app.json文件的配置
 
 ### 导航栏相关设置
 
@@ -133,7 +137,7 @@ ctrl+shift+p
 }
 ```
 
-## 基本视图容器
+## 4.基本视图容器
 
 ### swiper、swiper-item
 
@@ -171,7 +175,110 @@ scroll-into-view=“item的id”
 加了之后直接跳转到此view
 :::
 
-## 路由跳转
+### input相关
+
+#### type相关
+
+* 1.text文本输入键盘
+* 2.number数字类型
+* 3.password暗文
+* 4. idcard身份证输入键盘
+
+#### confirm-type 相关
+
+send
+右下角按钮为“发送”
+
+search
+右下角按钮为“搜索”
+
+next
+右下角按钮为“下一个”
+
+go
+右下角按钮为“前往”
+
+done
+右下角按钮为“完成”
+
+#### 事件绑定
+
+* 1.bindinput:键盘输入时触发，event.detail = {value, cursor, keyCode}，keyCode 为键值，2.1.0 起支持，处理函数可以直接 return 一个字符串，将替换输入框的内容。
+* 2.bindfoucs/bindblu聚焦/失去焦点
+* 3. bindconfirm点击完成按钮时触发，event.detail = {value: value}
+
+:::danger
+自定义小程序复选框 圆圈复选框
+
+```markup
+/* 重写 checkbox 样式 */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+border-radius: 50%;/* 圆角 */
+width: 40rpx; /* 背景的宽 */
+height: 40rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+border: 1rpx solid #1d2088;
+background: #1d2088;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+border-radius: 50%;/* 圆角 */
+width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+line-height: 40rpx;
+text-align: center;
+font-size:30rpx; /* 对勾大小 30rpx */
+color:#fff; /* 对勾颜色 白色 */
+background: transparent;
+transform:translate(-50%, -50%) scale(1);
+-webkit-transform:translate(-50%, -50%) scale(1);
+}
+```
+
+:::
+
+### 图片image相关
+
+#### 属性mode的合法值
+
+* 1.scaleToFill
+缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
+* 2.aspectFit
+缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
+* 3.aspectFill
+缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
+* 4.widthFix
+缩放模式，宽度不变，高度自动变化，保持原图宽高比不变
+
+#### 长按图片显示识别小程序码菜单
+
+* show-menu-by-longpress：true //比如长按扫描二维码
+
+#### 图片懒加载
+
+对图片加载进行监听bindload=“”;配合lazy-load使用
+
+图片懒加载，在即将进入一定范围（上下三屏）时才开始加载
+
+#### 从本地相册选择图片或使用相机拍照
+
+```markup
+wx.chooseImage({
+  count: 3,最多能选取照片的数量
+  sizeType: ['original', 'compressed’],//图片类型 “原图”，“压缩”
+  sourceType: ['album', 'camera’],//来源 ‘相册’，’相机‘
+  success (res) {
+    // tempFilePath可以作为img标签的src属性显示图片
+    const tempFilePaths = res.tempFilePaths
+  }
+})
+```
+
+
+## 5.路由跳转
 
 * 1.wx.switchTab: 跳转到tabBar页面，并关闭所有非tabBar页面
 
