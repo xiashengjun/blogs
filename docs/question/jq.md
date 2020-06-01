@@ -100,7 +100,7 @@ let now = new Date();
     }
 ```
 
-## 多行元素的文本省略号
+## 3.多行元素的文本省略号
 
 ```markup
 overflow : hidden;
@@ -110,18 +110,26 @@ display: -webkit-box;
 -webkit-box-orient: vertical
 ```
 
-## 事件循环
+## 4.事件循环
 
 ### 异步事件包括
 
-* 定时器
+* 1.定时器
 
-* ajax
+* 2.ajax
 
-* 绑定的onclick事件等
+* 3.绑定的onclick事件等
 
-* promise
+* 4.promise
 
 :::danger
 new promise 会立即执行，但是then是需要异步执行的
 :::
+
+### 宏任务与微任务的区别
+
+1.MacroTask（宏观任务） serTimeout,setInterval,requestAnimationFrame,I/O
+
+2.MicroTask（微观任务） process.nextTick,Promise,Object.observe,MutationObserver
+
+3.先同步 再取出第一个宏任务 所有的相关微任务总会在下一个宏任务之前全部执行完毕  先微后宏
