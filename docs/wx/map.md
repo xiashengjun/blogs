@@ -4,7 +4,7 @@ title: （三）腾讯地图开放平台快速入门
 
 ## 1.引入腾讯地图
 
-```markup
+```js
 // 引入SDK核心类
 var QQMapWX = require('xxx/qqmap-wx.js');
 
@@ -17,7 +17,7 @@ var qqmapsdk = new QQMapWX({
 
 ## 2.获取全国地图信息列表
 
-```markup
+```js
 //在Page({})中使用下列代码
 //页面显示/切入前台时触发
 onShow: function() {
@@ -42,7 +42,7 @@ onShow: function() {
 
 ## 3.获取城市列表
 
-```markup
+```js
 //在Page({})中使用下列代码
 //页面显示/切入前台时触发
 onShow: function() {
@@ -81,7 +81,7 @@ onShow: function() {
 
 ## 4.计算两地之间的距离
 
-```markup
+```js
 formSubmit(e){
     var _this = this;
     //调用距离计算接口

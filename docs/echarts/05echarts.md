@@ -6,7 +6,7 @@ title: （五）地图
 
 ![avatar](/assets/img/飞行图.png)
 
-```markup
+```js
 createEcharts() {
       
       let chart = this.$refs.mychart;

@@ -9,6 +9,7 @@ title: （一）echarts的基本配置
 > >trigger触发方式
 
 ## 2.legend
+
 > 图例组件
 > `legend:{
           type:'plain',
@@ -18,6 +19,7 @@ title: （一）echarts的基本配置
 > 当series中有name值的时候，legend没有data值也会显示图例组件
 
 ## 3.toolbox
+
 > 工具箱组件
 > >可以实现另存为图片等功能
 > >feature:{
@@ -25,6 +27,7 @@ title: （一）echarts的基本配置
 > > }
 
 ## 4.grid
+
 > 网格配置
 > 修改图表大小
 > 
@@ -60,13 +63,15 @@ title: （一）echarts的基本配置
           }`
 
 ## 6.title
+
 > `title:{
           text:'我的Echarts',
           left:'middle'
         }`
 
 ## 7.让图表跟随屏幕自适应
-```markup
+
+```js
  window.addEventListener("resize",function(){
         mychart.resize();
       })

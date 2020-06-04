@@ -1,10 +1,13 @@
 ---
 title: Vue相关面试题
 ---
-## 1.computed有缓存，data不变则不会重新计算
+## 1.v-for为何使用key
 
+* diff算法中通过tag和key来判断，是否是sameNode;
+* 减少渲染次数，提升渲染性能
 
 ## 2.watch 如何深度监听？
+
  > deep:true;
 
 
@@ -83,7 +86,7 @@ v-if  是真正的条件渲染，在组件的创建建和销毁之间切换。
 
 ### 核心API - Object.defineProperty
 
-```markup
+```js
 //重新定义属性，需要监听起来
 function defineReactive(target,key,value){
    //深度监听

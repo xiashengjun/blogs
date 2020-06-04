@@ -18,7 +18,7 @@ wx.openSetting({})
 
 ### 获取当前位置信息
 
-```markup
+```js
 wx.getLocation({
     success: function(res) {
       const latitude = res.latitude;//获取当前纬度
@@ -41,7 +41,7 @@ wx.getLocation({
 
 ### 使用微信内置地图查看位置
 
-```markup
+```js
 wx.getLocation({
  type: 'gcj02', //返回可以用于wx.openLocation的经纬度
  success (res) {
@@ -58,7 +58,7 @@ wx.getLocation({
 
 ### 获取用户信息
 
-```markup
+```js
 app.js里面
  // 获取用户信息
     wx.getSetting({
@@ -98,7 +98,7 @@ const app = getApp()
 
 ### 显示消息提示框
 
-```markup
+```js
 wx.showToast({
   title: '成功',
   icon: 'success',
@@ -108,7 +108,7 @@ wx.showToast({
 
 ### 显示模态对话框
 
-```markup
+```js
 wx.showModal({
   title: '提示',
   content: '这是一个模态弹窗',
@@ -124,7 +124,7 @@ wx.showModal({
 
 ### 显示 loading 提示框
 
-```markup
+```js
 wx.showLoading({
   title: '加载中',
 	mask: ‘true’
@@ -137,7 +137,7 @@ setTimeout(function () {
 
 ### 从底部伸出菜单
 
-```markup
+```js
 wx.showActionSheet({
   itemList: ['A', 'B', 'C'],
   success (res) {

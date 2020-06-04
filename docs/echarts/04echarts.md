@@ -6,7 +6,7 @@ title: （四）横向柱状图
 
 ![avatar](/assets/img/横向柱状图.png)
 
-```markup
+```js
 createEcharts() {
       
       let chart = this.$refs.mychart;

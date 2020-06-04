@@ -4,7 +4,7 @@ title: （二）折线图
 # 示例
 ![avatar](/assets/img/折线图.png)
 
-```markup
+```js
 createEcharts() {
       let chart = this.$refs.mychart;
       let myChart = this.$echarts.init(chart);

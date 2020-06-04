@@ -20,7 +20,7 @@ title: JQuery和JS相关面试题
 
 #### 自定义扩展属性
 
-  ```markup
+  ```js
   extend(obj, target) {
       target = target || this;
       Object.keys(obj).forEach(key => {
@@ -53,7 +53,7 @@ title: JQuery和JS相关面试题
 
 ### 设置cookie的有效期
 
-```markup
+```js
 let now = new Date();
     now.setMinutes(now.getMinutes() + 1);
     document.cookie = "name=xia;expires=" + now.toUTCString();
@@ -61,7 +61,7 @@ let now = new Date();
 
 ### 删除cookie值
 
-```markup
+```js
  let now = new Date();
     now.setMinutes(now.getMinutes() - 1);
     document.cookie = "name=xia;expires=" + now.toUTCString();
@@ -69,7 +69,7 @@ let now = new Date();
 
 ### 封装cookie
 
-```markup
+```js
 //添加cookie
   function setCookie(key, val, expires) {
      if(typeof val === 'object'){
@@ -102,7 +102,7 @@ let now = new Date();
 
 ## 3.多行元素的文本省略号
 
-```markup
+```js
 overflow : hidden;
 text-overflow: ellipsis;
 display: -webkit-box;

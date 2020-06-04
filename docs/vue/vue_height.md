@@ -6,7 +6,7 @@ title: （二）Vue的高级特性
 
 ## 1.自定义v-model
 
-```markup
+```js
 <input
       style="border:2px solid red"
       type="text"
@@ -36,7 +36,7 @@ title: （二）Vue的高级特性
 
 ## 3.slot
 > 基本使用
-```markup
+```js
 <div><slot name="header">
 slot的默认内容
  </slot>
@@ -47,7 +47,7 @@ slot的默认内容
  ```
 
 > 作用域插槽
-```markup
+```js
 <Home>
  <template  v-slot="getdata(随便取)">
  <div>
@@ -58,7 +58,7 @@ slot的默认内容
  ```
 
 > 具名插槽
- ```markup
+ ```js
  <Home>
  <template v-slot:header  v-slot="getdata(随便取)">
  <div>
@@ -84,7 +84,7 @@ slot的默认内容
 > > 1.缓存组件
 > > 2.组件频繁切换，不需要重复渲染，不会重复创建和销毁
 > 
-```markup
+```js
 <keep-alive>
  <Home />
 </keep-alive>
@@ -172,7 +172,7 @@ var vm = new Vue({
 
 * 获取vuex上的数据\(不推荐\)
 
-```markup
+```js
 <h1>
     <!-- 不推荐直接获取 -->    
     {{$store.state.count}}
@@ -189,3 +189,28 @@ var vm = new Vue({
     }
 </script>
 ```
+
+## 8.hash路由和H5 history路由
+
+![avatar](/assets/img/hash.png)
+
+### hash的特点 
+
+* hash变化会戳发页面跳转，即浏览器的前进、后退。
+* hash永远不会刷新页面，SPA必需的特点。
+* hash永远不会提交到serve端（前端自生自灭）。
+* hash是通过window.onhashchange()进行监听的
+
+### H5 history的特点
+
+* 用url规范的路由，但跳转时不刷新页面
+* history.pushState
+* window.onpopstate
+* 需要后端支持
+
+```js
+//监听浏览器前进、后退
+window.onpostate = (event) =>{
+  console.log('onpopstate',event.state,location.pathname)
+}
+、、、

@@ -5,7 +5,7 @@ title: （一）vue的基本使用
 
 ## 1.Vue引用
 
-```markup
+```js
 <!-- 开发环境版本，包含了有帮助的命令行警告 -->
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
@@ -15,7 +15,7 @@ title: （一）vue的基本使用
 
 ## 2.vue基本代码结构
 
-```markup
+```js
 <div id="app">
     {{msg}}
 </div>
@@ -61,7 +61,7 @@ var vm = new Vue({
 
 ### v-bind数据绑定
 
-```markup
+```js
 <input type="button" value="按钮" v-bind:title="title"/>
 <!-- 简写 :title等同于v-bind:title,v-bind里面可以写合法的js表达式 -->
 <input type="button" value="按钮" :title="title + '123'"/>
@@ -77,7 +77,7 @@ var vm = new Vue({
 
 ### v-on事件绑定
 
-```markup
+```js
 <div id="app">
     <!-- v-on:后面跟事件类型,如click,keyups -->
     <input type="button" value="按钮" v-on:click="show"/>
@@ -101,7 +101,7 @@ var vm = new Vue({
 
 > 需求:点击"浪起来"实现跑马灯效果,点击"低调"停止跑马灯效果
 
-```markup
+```js
 <div id="app">
     <input type="button" value="浪起来" @click="lang"/>
     <input type="button" value="低调" @click="stop"/>
@@ -140,7 +140,7 @@ var vm = new Vue({
 > * .self 只当事件在该元素本身\(比如不是子元素\)触发时触发回调
 > * .once 事件只触发一次
 
-```markup
+```js
 <!-- 事件修饰符可以合并使用:如@click.stop.prevent -->
 <div id="app">
     <div id="area" @click="divClick" style="background: darkcyan">
@@ -174,7 +174,7 @@ var vm = new Vue({
 >
 >  select checkbox textarea
 
-```markup
+```js
 <div id="app">
     <!-- 修改input,span内容也会改变 -->
     <span>{{msg}}</span><br/>
@@ -193,7 +193,7 @@ var vm = new Vue({
 
 ### v-model实现简易计算器效果
 
-```markup
+```js
 <div id="app">
     <input type="text" v-model="n1"/>
     <select v-model="opt">
@@ -233,25 +233,25 @@ var vm = new Vue({
 
 1. 数组
 
-   ```markup
+   ```js
    <h1 :class="['red','thin']">this is a eval h1</h1>
    ```
 
 2. 数组中使用三元表达式
 
-   ```markup
+   ```js
    <h1 :class="['red','thin',isactive?'active':'']">this is a eval h1</h1>
    ```
 
 3. 数组中嵌套对象
 
-   ```markup
+   ```js
    <h1 :class="['red','thin',{'active':isactive}]">this is a eval h1</h1>
    ```
 
 4. 直接使用对象
 
-   ```markup
+   ```js
    <h1 :class="{red:true,italic:true,active:true,thin:true}">this is a eval h1</h1>
    ```
 
@@ -259,7 +259,7 @@ var vm = new Vue({
 
 1. 直接在元素上通过`:style`的形式,书写样式对象
 
-   ```markup
+   ```js
    <h1 :style="{color:'red','font-size':'40px'}">this is a eval h1</h1>
    ```
 
@@ -275,7 +275,7 @@ var vm = new Vue({
 
    * 在元素中,通过属性绑定的形式,将样式对象应用到元素中:
 
-   ```markup
+   ```js
    <h1 :style="h1StyleObj">this is a eval h1</h1>
    ```
 
@@ -292,7 +292,7 @@ var vm = new Vue({
 
    * 在元素中,通过属性绑定的形式,将样式对象应用到元素中
 
-   ```markup
+   ```js
    <h1 :style="[h1StyleObj,h1StyleObj2]">this is a eval h1</h1>
    ```
 
@@ -308,7 +308,7 @@ var vm = new Vue({
 
 1. 迭代数组
 
-   ```markup
+   ```js
    <ul>
        <li v-for="(item,i) in list">索引:{{i} --- 姓名:{{item.name}} --- 年龄:{{item.age}}}</li>
    </ul>
@@ -316,14 +316,14 @@ var vm = new Vue({
 
 2. 迭代对象中的属性\(顺序为:值,键,索引\)
 
-   ```markup
+   ```js
    <!-- 循环遍历对象身上的属性 -->
    <div v-for="(val,ke,i) in userInfo">{{{val}} --- {{key}} --- {{i}}}</div>
    ```
 
 3. 迭代数字\(i从1开始\)
 
-   ```markup
+   ```js
    <p v-for="i in 10">{{i}}</p>
    ```
 
@@ -333,7 +333,7 @@ var vm = new Vue({
 >
 > `v-if`有较高的切换性能消耗,`v-for`有较高的初始渲染消耗;如果元素涉及到频繁的切换,最好不要使用v-if
 
-```markup
+```js
 <div id="app">
     <input type="button" @click="flag=!flag" value="切换">
     <h3 v-if="flag">这是v-if控制的元素</h3>
@@ -351,7 +351,7 @@ var vm = new Vue({
 
 ## 5.案例: 使用vue实现品牌新增,删除以及关键字搜索和时间处理
 
-```markup
+```js
 <div id="app">
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -497,7 +497,7 @@ var vm = new Vue({
 
 1. html元素
 
-```markup
+```js
 <td>{{item.ctime | dataFormat('yyyy-mm-dd')}}</td>
 ```
 
@@ -513,7 +513,7 @@ filters: {
 
 * 替换'单纯'为'邪恶'
 
-```markup
+```js
 <div id="app">
     <p> {{msg | msgFormat('邪恶') | str}}</p>
 </div>
@@ -550,7 +550,7 @@ Vue.config.keyCodes.f2 = 113;
 
 1. 使用自定义的按键修饰符
 
-```markup
+```js
 <input type="text" v-model="name" @keyup.f2="add">
 ```
 
@@ -562,7 +562,7 @@ Vue.config.keyCodes.f2 = 113;
 
 * 使用Vue.directive\(\)定义全局指令 
 
-```markup
+```js
 <input id="search" type="text" class="form-control" v-model="keywords" v-focus v-color="'blue'">
 <script>
     //自动获取焦点
@@ -628,7 +628,7 @@ Vue.directive('color-swatch', function (el, binding) {
     * beforeDestory: 实例销毁之前调用,在这一步,实例仍然完全可用
     * destoryedL Vue实例销毁后调用,调用后,vue实例指示的所有东西都会解除绑定,所有的事件监听器都会移除,所有的子实例也会被销毁
 
-```markup
+```js
 <div id="app">
     <input type="button" value="触发change" @click="msg='this is not a msg'">
     <h3 id="h3">{{msg}}</h3>
@@ -687,13 +687,13 @@ Vue.directive('color-swatch', function (el, binding) {
 
 1. 导入vue-router组件类库
 
-```markup
+```js
 <script src="https://cdn.bootcss.com/vue-router/3.1.3/vue-router.min.js"></script>
 ```
 
 1. 使用router-link组件来导航
 
-```markup
+```js
 <!-- 使用router-link组件来导航 -->
 <router-link to="/login">登录</router-link>
 <router-link to="/register">注册</router-link>
@@ -701,7 +701,7 @@ Vue.directive('color-swatch', function (el, binding) {
 
 1. 使用router-view组件来显示匹配到的组件
 
-```markup
+```js
 <!-- 使用router-view组件来显示匹配到的组件 -->
 <router-view></router-view>
 ```
@@ -738,7 +738,7 @@ var vm = new Vue({
 })
 ```
 
-```markup
+```js
 <div id="app">
     <!-- 注意:此处需要加'#'号 -->
     <!-- <a href="#/login">登录</a>
@@ -787,7 +787,7 @@ var vm = new Vue({
 
 * 方式1
 
-```markup
+```js
 <div id="app">
     <!-- 如果在路由中,使用查询字符串,给路由传参 -->
     <router-link to="/login?id=10&name=zhangsan">登录</router-link>
@@ -818,7 +818,7 @@ var vm = new Vue({
 
 * 方式2
 
-```markup
+```js
 <div id="app">
     <!-- 如果在路由中,使用查询字符串,给路由传参 -->
     <router-link to="/login/12/zhangsan">登录</router-link>
@@ -844,7 +844,7 @@ var vm = new Vue({
 
 ### 路由嵌套
 
-```markup
+```js
 <div id="app">
     <router-link to="/account">Account</router-link>
     <router-view></router-view>
@@ -894,7 +894,7 @@ var vm = new Vue({
 
 ### 案例: watch监视名称改变
 
-```markup
+```js
 <div id="app">
     <input type="text" v-model="first_name"> + 
     <input type="text" v-model="last_name"> =
@@ -923,7 +923,7 @@ var vm = new Vue({
 
 ### watch监视路由改变
 
-```markup
+```js
 <script>
     var login = {
         template: '<h1>登录</h1>'
@@ -955,7 +955,7 @@ var vm = new Vue({
 
 ## 13.computed计算属性
 
-```markup
+```js
 <script>
     var vm=new Vue({
         el:'#app',
@@ -979,7 +979,7 @@ var vm = new Vue({
 
 ## 14.vue render渲染
 
-```markup
+```js
 <div id="app">
     <login></login>
 </div>

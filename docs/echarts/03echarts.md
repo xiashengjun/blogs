@@ -4,7 +4,7 @@ title: （三）饼形图
 # 示例
 ![avatar](/assets/img/饼形图.png)
 
-```markup
+```js
 createEcharts() {
       let chart = this.$refs.mychart;
       let myChart = this.$echarts.init(chart);
