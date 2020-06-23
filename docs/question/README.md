@@ -6,9 +6,35 @@ title: Vue相关面试题
 * diff算法中通过tag和key来判断，是否是sameNode;
 * 减少渲染次数，提升渲染性能
 
-## 2.watch 如何深度监听？
+## 2.防抖节流函数
 
- > deep:true;
+```js
+ //防抖函数
+    function debounce(fn,delay){
+      let timer;
+      return function(){
+        var that = this; // 取debounce执行作用域的this
+        var args = arguments;
+        if(timer){
+          clearInterval(timer);
+        }
+        timer=setInterval(()=>{
+          fn.apply(that,args)
+        },delay)
+      }
+    }
+    //节流函数
+    function throttle(fn, delay) {
+      let now = +new Date();
+      let that = this;
+      return function () {
+        if (+new Date() - now > delay){
+          fn.apply(that,arguments);
+          now = + new Date();
+        }
+      }
+    }
+```
 
 
 ## 3.watch监听引用类型，拿不到oldVal
@@ -126,3 +152,34 @@ function defineReactive(target,key,value){
 * 只比较同一层级，不跨级比较
 * tag不相同，则直接删掉重建，不再深度比较
 * tag和key，两者都相同，则认为是相同节点，不再深度比较
+
+## 12.当你从url输入地址到登录成功，中间都经历了哪些阶段？
+
+1.DNS解析
+
+2.TCP连接
+
+3.发送HTTP请求
+
+4.服务器处理请求并返回HTTP报文
+
+5.浏览器解析渲染页面
+
+6.连接结束
+
+## 13.介绍下MVVM
+
+* 首先MVVM是一种软件框架模式，vue就是采用的这种模式
+* 其中M代表的是数据模型
+* V代表是视图模型
+* VM是视图适配器
+* Binder层在View和ViewModel之间做了双向数据绑定
+
+## 14.计算属性和watch的区别
+
+1.computed是根据依赖的数据动态显示新的计算结果。计算结果会被缓存，只有在它依赖的属性值改变之后，下一次获取computed的值时才会重新调用对应的getter来计算
+
+2.watcher 更像是一个 data 的数据监听回调，当依赖的 data 的数据变化，执行回调，在方法中会传入 newVal 和 oldVal。可以提供输入值无效，提供中间值 特场景。Vue 实例将会在实例化时调用 $watch()，遍历 watch 对象的每一个属性。如果你需要在某个数据变化时做一些事情，使用watch。
+
+## 15.前端浏览器兼容性问题和解决办法
+

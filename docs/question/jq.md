@@ -100,17 +100,8 @@ let now = new Date();
     }
 ```
 
-## 3.多行元素的文本省略号
 
-```js
-overflow : hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
--webkit-line-clamp: 3;
--webkit-box-orient: vertical
-```
-
-## 4.事件循环
+## 3.事件循环
 
 ### 异步事件包括
 

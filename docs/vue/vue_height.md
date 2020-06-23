@@ -1,5 +1,5 @@
 ---
-title: （二）Vue的高级特性
+title: （二）Vue的进阶
 ---
 
 # Vue的进阶
@@ -213,4 +213,36 @@ var vm = new Vue({
 window.onpostate = (event) =>{
   console.log('onpopstate',event.state,location.pathname)
 }
-、、、
+``` 
+
+## 9.组件的跨级通讯:provide & inject
+
+:::danger
+提示：provide 和 inject 绑定并不是可响应的。这是刻意为之的。然而，如果你传入了一个可监听的对象，那么其对象的属性还是可响应的。
+
+也就是说，Vue 不会对 provide 中的变量进行响应式处理。所以，要想 inject 接受的变量是响应式的，provide 提供的变量本身就需要是响应式的。
+
+### 使用场合
+
+* 1.多人协作时，做好作用域隔离
+* 2.尽量使用一次性数据作为全局状态
+:::
+
+```vue
+// 父级组件提供 'foo'
+var Provider = {
+  provide: {
+    foo: 'bar'
+  },
+  // ...
+}
+
+// 子组件注入 'foo'
+var Child = {
+  inject: ['foo'],
+  created () {
+    console.log(this.foo) // => "bar"
+  }
+  // ...
+}
+```
