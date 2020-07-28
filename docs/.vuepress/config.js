@@ -32,6 +32,10 @@ module.exports = {
           {
             text: 'Git',
             link: '/git/'
+          },
+          {
+            text: 'elementui',
+            link: '/el/'
           }
         ]
       },

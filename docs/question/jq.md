@@ -51,6 +51,32 @@ title: JQuery和JS相关面试题
 >>* sessionStorage 数据在当前浏览器窗口关闭后自动删除
 >>* cookie 设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
 
+### Cookie 中的重要参数
+
+Domain
+指定 cookie 所属域名，默认是当前域名
+cookie.setDomain("")
+
+
+Max-Age
+设置cookie的过期时间，单位为秒
+cookie.setMaxAge(10)
+
+
+Path
+指定 cookie 在哪个路径（路由）下生效，默认是 '/'
+cookie.setPath("")
+
+
+HttpOnly
+如果给某个 cookie 设置了 httpOnly 属性，则无法通过 JS 脚本 读取到该 cookie 的信息，但还是能通过 Application 中手动修改 cookie，所以只是在一定程度上可以防止 XSS 攻击，不是绝对的安全
+cookie.setHttpOnly(true)
+
+
+Secure
+告诉浏览器此Cookie只能在Https安全协议中传输,如果是Http则禁止传输
+cookie.setSecure(true)
+
 ### 设置cookie的有效期
 
 ```js
