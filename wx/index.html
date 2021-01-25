@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>（一）微信小程序基础 | 七分熟</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="七分熟的第一个博客">
+    <link rel="preload" href="/assets/css/0.styles.cec05db3.css" as="style"><link rel="preload" href="/assets/js/app.fe254db9.js" as="script"><link rel="preload" href="/assets/js/2.dae41ef3.js" as="script"><link rel="preload" href="/assets/js/22.5e74cd7a.js" as="script"><link rel="prefetch" href="/assets/js/10.dc0a1eaa.js"><link rel="prefetch" href="/assets/js/11.f5d53f0f.js"><link rel="prefetch" href="/assets/js/12.87277a04.js"><link rel="prefetch" href="/assets/js/13.164183b9.js"><link rel="prefetch" href="/assets/js/14.6ee89c0e.js"><link rel="prefetch" href="/assets/js/15.48878c38.js"><link rel="prefetch" href="/assets/js/16.bef41bc4.js"><link rel="prefetch" href="/assets/js/17.ddeb5c46.js"><link rel="prefetch" href="/assets/js/18.59988df5.js"><link rel="prefetch" href="/assets/js/19.540df982.js"><link rel="prefetch" href="/assets/js/20.887841cb.js"><link rel="prefetch" href="/assets/js/21.db531af1.js"><link rel="prefetch" href="/assets/js/23.a066c173.js"><link rel="prefetch" href="/assets/js/24.63d59641.js"><link rel="prefetch" href="/assets/js/25.733dd08f.js"><link rel="prefetch" href="/assets/js/3.588e0ea5.js"><link rel="prefetch" href="/assets/js/4.32072f09.js"><link rel="prefetch" href="/assets/js/5.41d39ad3.js"><link rel="prefetch" href="/assets/js/6.67a6bd14.js"><link rel="prefetch" href="/assets/js/7.f2c1c925.js"><link rel="prefetch" href="/assets/js/8.6f5bf118.js"><link rel="prefetch" href="/assets/js/9.58e3d592.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cec05db3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="七分熟" class="logo"> <span class="site-name can-hide">七分熟</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/echarts/" class="nav-link">
+  echarts
+</a></li><li class="dropdown-item"><!----> <a href="/wx/" class="nav-link router-link-exact-active router-link-active">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/el/" class="nav-link">
+  elementui
+</a></li></ul></div></div><div class="nav-item"><a href="/words/" class="nav-link">
+  留言
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/echarts/" class="nav-link">
+  echarts
+</a></li><li class="dropdown-item"><!----> <a href="/wx/" class="nav-link router-link-exact-active router-link-active">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/el/" class="nav-link">
+  elementui
+</a></li></ul></div></div><div class="nav-item"><a href="/words/" class="nav-link">
+  留言
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>wx</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wx/" class="active sidebar-link">（一）微信小程序基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wx/#_1-小程序结构" class="sidebar-link">1.小程序结构</a></li><li class="sidebar-sub-header"><a href="/wx/#_3-app-json文件的配置" class="sidebar-link">3.app.json文件的配置</a></li><li class="sidebar-sub-header"><a href="/wx/#_4-基本视图容器" class="sidebar-link">4.基本视图容器</a></li><li class="sidebar-sub-header"><a href="/wx/#_5-路由跳转" class="sidebar-link">5.路由跳转</a></li></ul></li><li><a href="/wx/jurisdiction.html" class="sidebar-link">（二）权限和交互提示框相关</a></li><li><a href="/wx/map.html" class="sidebar-link">（三）腾讯地图开放平台快速入门</a></li><li><a href="/wx/request.html" class="sidebar-link">（四）网络请求</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><blockquote><p>开发前期准备工作不描述(申请appid,下载开发工具...)</p></blockquote> <h2 id="_1-小程序结构"><a href="#_1-小程序结构" class="header-anchor">#</a> 1.小程序结构</h2> <h3 id="小程序开发主要部分"><a href="#小程序开发主要部分" class="header-anchor">#</a> 小程序开发主要部分</h3> <ul><li><p>页面布局: wxml =&gt; 类似html</p></li> <li><p>页面样式: wxss =&gt; 类似css(部分支持,部分增强)</p></li> <li><p>页面脚本: js+wxss</p></li> <li><p>目录结构</p> <div class="language-markup extra-class"><pre class="language-markup"><code> project
+ ├── pages
+ |   ├── index
+ |   |   ├── index.json  index 页面配置
+ |   |   ├── index.js    index 页面逻辑
+ |   |   ├── index.wxml  index 页面结构
+ |   |   └── index.wxss  index 页面样式表
+ |   └── log
+ |       ├── log.json    log 页面配置
+ |       ├── log.wxml    log 页面逻辑
+ |       ├── log.js      log 页面结构
+ |       └── log.wxss    log 页面样式表
+ ├── app.js              小程序逻辑
+ ├── app.json            小程序公共设置
+ └── app.wxss            小程序公共样式表
+</code></pre></div></li></ul> <h3 id="文件结构"><a href="#文件结构" class="header-anchor">#</a> 文件结构</h3> <p><img src="/assets/img/wx-1.png" alt=""></p> <h3 id="小程序常见配置文件"><a href="#小程序常见配置文件" class="header-anchor">#</a> 小程序常见配置文件</h3> <ul><li>project.config.json: 项目配置文件,如项目名称,appid</li> <li>sitemap.json: 站点地图</li> <li>app.json: 全局配置</li> <li>page.json: 页面配置</li></ul> <h3 id="小程序的双线程模型"><a href="#小程序的双线程模型" class="header-anchor">#</a> 小程序的双线程模型</h3> <ul><li>谁是小程序的宿主环境? =&gt; 微信客户端</li> <li>宿主环境为了执行小程序的各种文件:wxml,wxss.js文件,提供了小程序的双线程模型</li> <li>渲染层 =&gt; 执行wxml,wxss(一个程序有多个页面,会使用多个Webview线程) | 逻辑层 =&gt; 执行js  | native(微信客户端)</li></ul> <p><img src="/assets/img/wx-2.png" alt=""></p> <ul><li>界面渲染整体流程
+<ul><li>在渲染层,宿主环境把WXML转化为对应的JS对象</li> <li>将JS对象再次转换为真实DOM树,交由渲染层线程渲染</li> <li>数据变化时,逻辑层提供最新的变化数据,JS对象发生变化比较进行diff算法对比</li> <li>将最新变化的内容反映到真实的DOM树，更新UI</li></ul></li></ul> <h3 id="小程序启动流程"><a href="#小程序启动流程" class="header-anchor">#</a> 小程序启动流程</h3> <p><img src="/assets/img/wx-3.png" alt=""></p> <h3 id="快捷键"><a href="#快捷键" class="header-anchor">#</a> 快捷键</h3> <div class="language-text extra-class"><pre class="language-text"><code>// 代码格式化
+alt+shift+f
+// 真机调试(会自动同步)
+ctrl+shift+p
+</code></pre></div><h3 id="注册app常规使用"><a href="#注册app常规使用" class="header-anchor">#</a> 注册App常规使用</h3> <ul><li>判断小程序的进入场景</li> <li>监听生命周期函数,在生命周期中执行对应的业务逻辑,比如在某个生命周期函数中获取微信用户的信息</li> <li>因为App()实例只能有一个,并且时全局共享的(单例对象),所以可以放入共享数据</li></ul> <h3 id="page生命周期"><a href="#page生命周期" class="header-anchor">#</a> Page生命周期</h3> <p><img src="/assets/img/wx-4.png" alt=""></p> <h3 id="mustache语法"><a href="#mustache语法" class="header-anchor">#</a> Mustache语法</h3> <h4 id="wxml基本格式"><a href="#wxml基本格式" class="header-anchor">#</a> WXML基本格式</h4> <ul><li>类似于html代码</li> <li>必须有严格的闭合(单标签也需要闭合)</li> <li>大小写敏感</li> <li>div=&gt;view;span=&gt;text</li></ul> <h2 id="_3-app-json文件的配置"><a href="#_3-app-json文件的配置" class="header-anchor">#</a> 3.app.json文件的配置</h2> <h3 id="导航栏相关设置"><a href="#导航栏相关设置" class="header-anchor">#</a> 导航栏相关设置</h3> <div class="language-markup extra-class"><pre class="language-markup"><code>&quot;window&quot;:{
+  &quot;backgroundTextStyle&quot;:&quot;light&quot;,         //下拉loading的样式，仅支持dark和light
+  &quot;navigationBarBackgroundColor&quot;:&quot;#000&quot;, //导航栏背景颜色，16进制
+  &quot;navigationBarTitleText&quot;:&quot;首页&quot;,        //导航栏标题文字内容
+  &quot;navigationBarTextStyle&quot;:&quot;white&quot;       //导航栏标题颜色，仅支持black和white
+}
+</code></pre></div><h3 id="tabbar的样式设置"><a href="#tabbar的样式设置" class="header-anchor">#</a> tabbar的样式设置</h3> <div class="language-markup extra-class"><pre class="language-markup"><code>&quot;tabBar&quot;:{
+  &quot;color&quot;:&quot;#999&quot;,             //tabBar上的文字颜色，16进制
+  &quot;selectedColor&quot;:&quot;#FF7792&quot;,  //tabBar上选中文字颜色，16进制
+  &quot;list&quot;:[                    //tabBar的list里为数组，里面的对象至少为2项
+          {
+            &quot;pagePath&quot;: &quot;pages/index/index&quot;,
+            &quot;text&quot;: &quot;首页&quot;,
+            &quot;iconPath&quot;: &quot;./icons/home.png&quot;,
+            &quot;selectedIconPath&quot;: &quot;./icons/home-o.png&quot;
+        }, {
+            &quot;pagePath&quot;: &quot;pages/category/index&quot;,
+            &quot;text&quot;: &quot;分类&quot;,
+            &quot;iconPath&quot;: &quot;./icons/category.png&quot;,
+            &quot;selectedIconPath&quot;: &quot;./icons/category-o.png&quot;
+        }, {
+            &quot;pagePath&quot;: &quot;pages/cart/index&quot;,
+            &quot;text&quot;: &quot;购物车&quot;,
+            &quot;iconPath&quot;: &quot;./icons/cart.png&quot;,
+            &quot;selectedIconPath&quot;: &quot;./icons/cart-o.png&quot;
+        }, {
+            &quot;pagePath&quot;: &quot;pages/user/index&quot;,
+            &quot;text&quot;: &quot;我的&quot;,
+            &quot;iconPath&quot;: &quot;./icons/my.png&quot;,
+            &quot;selectedIconPath&quot;: &quot;./icons/my-o.png&quot;
+        }
+  ]
+}
+</code></pre></div><h2 id="_4-基本视图容器"><a href="#_4-基本视图容器" class="header-anchor">#</a> 4.基本视图容器</h2> <h3 id="swiper、swiper-item"><a href="#swiper、swiper-item" class="header-anchor">#</a> swiper、swiper-item</h3> <table><thead><tr><th>属性名</th> <th>类型</th> <th>默认值</th> <th>说明</th></tr></thead> <tbody><tr><td>indicator-dots</td> <td>Boolean</td> <td>false</td> <td>是否显示面板指示点</td></tr> <tr><td>indicator-color</td> <td>Color</td> <td>rgba</td> <td>指示点的颜色</td></tr> <tr><td>indicator-active-color</td> <td>Color</td> <td>#000</td> <td>当前选中的指示点颜色</td></tr> <tr><td>autoplay</td> <td>Boolean</td> <td>false</td> <td>是否自动切换</td></tr> <tr><td>interval</td> <td>Number</td> <td>5000</td> <td>自动切换的时间</td></tr> <tr><td>duration</td> <td>Number</td> <td>5000</td> <td>滑动动画时长</td></tr> <tr><td>circular</td> <td>Boolean</td> <td>false</td> <td>是否采用衔接滑动</td></tr></tbody></table> <h3 id="文本text"><a href="#文本text" class="header-anchor">#</a> 文本text</h3> <ul><li>1.selectable:”true;长按可以复制文本；</li> <li>2.space决定空格的大小：string三个值ensp，emsp，nbsp半个中文字符，一个字符大小</li> <li>3.decode是否解析文本</li></ul> <h3 id="可滚动视图区域scroll-view"><a href="#可滚动视图区域scroll-view" class="header-anchor">#</a> 可滚动视图区域scroll-view</h3> <ul><li>1.Scroll-y:允许纵向滚动；//纵向时要给高Scroll -x:允许横向滚动；</li> <li>2.Scroll-top:可以设置竖向滚动条的位置；</li> <li>3.bindscrolltoupper:当滚动到顶部时回调；bindscrolltolower:当滚动到底部时回调；bindscroll:滚动时触发；</li></ul> <div class="language-markup extra-class"><pre class="language-markup"><code>scrollToTop() {
+    this.setAction({
+      scrollTop: 0
+    })
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>scroll-into-view=“item的id”
+加了之后直接跳转到此view</p></div> <h3 id="input相关"><a href="#input相关" class="header-anchor">#</a> input相关</h3> <h4 id="type相关"><a href="#type相关" class="header-anchor">#</a> type相关</h4> <ul><li>1.text文本输入键盘</li> <li>2.number数字类型</li> <li>3.password暗文</li> <li><ol start="4"><li>idcard身份证输入键盘</li></ol></li></ul> <h4 id="confirm-type-相关"><a href="#confirm-type-相关" class="header-anchor">#</a> confirm-type 相关</h4> <p>send
+右下角按钮为“发送”</p> <p>search
+右下角按钮为“搜索”</p> <p>next
+右下角按钮为“下一个”</p> <p>go
+右下角按钮为“前往”</p> <p>done
+右下角按钮为“完成”</p> <h4 id="事件绑定"><a href="#事件绑定" class="header-anchor">#</a> 事件绑定</h4> <ul><li>1.bindinput:键盘输入时触发，event.detail = {value, cursor, keyCode}，keyCode 为键值，2.1.0 起支持，处理函数可以直接 return 一个字符串，将替换输入框的内容。</li> <li>2.bindfoucs/bindblu聚焦/失去焦点</li> <li><ol start="3"><li>bindconfirm点击完成按钮时触发，event.detail = {value: value}</li></ol></li></ul> <div class="custom-block danger"><p class="custom-block-title">WARNING</p> <p>自定义小程序复选框 圆圈复选框</p> <div class="language-markup extra-class"><pre class="language-markup"><code>/* 重写 checkbox 样式 */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+border-radius: 50%;/* 圆角 */
+width: 40rpx; /* 背景的宽 */
+height: 40rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+border: 1rpx solid #1d2088;
+background: #1d2088;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+border-radius: 50%;/* 圆角 */
+width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+line-height: 40rpx;
+text-align: center;
+font-size:30rpx; /* 对勾大小 30rpx */
+color:#fff; /* 对勾颜色 白色 */
+background: transparent;
+transform:translate(-50%, -50%) scale(1);
+-webkit-transform:translate(-50%, -50%) scale(1);
+}
+</code></pre></div></div> <h3 id="图片image相关"><a href="#图片image相关" class="header-anchor">#</a> 图片image相关</h3> <h4 id="属性mode的合法值"><a href="#属性mode的合法值" class="header-anchor">#</a> 属性mode的合法值</h4> <ul><li>1.scaleToFill
+缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素</li> <li>2.aspectFit
+缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。</li> <li>3.aspectFill
+缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。</li> <li>4.widthFix
+缩放模式，宽度不变，高度自动变化，保持原图宽高比不变</li></ul> <h4 id="长按图片显示识别小程序码菜单"><a href="#长按图片显示识别小程序码菜单" class="header-anchor">#</a> 长按图片显示识别小程序码菜单</h4> <ul><li>show-menu-by-longpress：true //比如长按扫描二维码</li></ul> <h4 id="图片懒加载"><a href="#图片懒加载" class="header-anchor">#</a> 图片懒加载</h4> <p>对图片加载进行监听bindload=“”;配合lazy-load使用</p> <p>图片懒加载，在即将进入一定范围（上下三屏）时才开始加载</p> <h4 id="从本地相册选择图片或使用相机拍照"><a href="#从本地相册选择图片或使用相机拍照" class="header-anchor">#</a> 从本地相册选择图片或使用相机拍照</h4> <div class="language-markup extra-class"><pre class="language-markup"><code>wx.chooseImage({
+  count: 3,最多能选取照片的数量
+  sizeType: ['original', 'compressed’],//图片类型 “原图”，“压缩”
+  sourceType: ['album', 'camera’],//来源 ‘相册’，’相机‘
+  success (res) {
+    // tempFilePath可以作为img标签的src属性显示图片
+    const tempFilePaths = res.tempFilePaths
+  }
+})
+</code></pre></div><h2 id="_5-路由跳转"><a href="#_5-路由跳转" class="header-anchor">#</a> 5.路由跳转</h2> <ul><li><p>1.wx.switchTab: 跳转到tabBar页面，并关闭所有非tabBar页面</p></li> <li><p>2.wx.reLaunch: 关闭所有页面，跳转到任意页面</p></li> <li><p>3.wx.redirectTo: 关闭当前页面，跳转到非tabBar页面</p></li> <li><p>4.wx.navigateTo: 保留当前页面，跳转到非tabBar页面，使用wx.navigatoBack可以返回原页面</p></li></ul> <p><a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener noreferrer">小程序官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://developers.weixin.qq.com/miniprogram/dev/framework/structure.html" target="_blank" rel="noopener noreferrer">入口文件配置<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="https://developers.weixin.qq.com/miniprogram/dev/reference/scene-list.html" target="_blank" rel="noopener noreferrer">小程序打开场景<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p><a href="http://httpbin.org/" target="_blank" rel="noopener noreferrer">httpbin各类网络请求模拟<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2020年6月1日</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/wx/jurisdiction.html">
+        （二）权限和交互提示框相关
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.fe254db9.js" defer></script><script src="/assets/js/2.dae41ef3.js" defer></script><script src="/assets/js/22.5e74cd7a.js" defer></script>
+  </body>
+</html>

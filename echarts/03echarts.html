@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>（三）饼形图 | 七分熟</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="七分熟的第一个博客">
+    <link rel="preload" href="/assets/css/0.styles.cec05db3.css" as="style"><link rel="preload" href="/assets/js/app.fe254db9.js" as="script"><link rel="preload" href="/assets/js/2.dae41ef3.js" as="script"><link rel="preload" href="/assets/js/8.6f5bf118.js" as="script"><link rel="prefetch" href="/assets/js/10.dc0a1eaa.js"><link rel="prefetch" href="/assets/js/11.f5d53f0f.js"><link rel="prefetch" href="/assets/js/12.87277a04.js"><link rel="prefetch" href="/assets/js/13.164183b9.js"><link rel="prefetch" href="/assets/js/14.6ee89c0e.js"><link rel="prefetch" href="/assets/js/15.48878c38.js"><link rel="prefetch" href="/assets/js/16.bef41bc4.js"><link rel="prefetch" href="/assets/js/17.ddeb5c46.js"><link rel="prefetch" href="/assets/js/18.59988df5.js"><link rel="prefetch" href="/assets/js/19.540df982.js"><link rel="prefetch" href="/assets/js/20.887841cb.js"><link rel="prefetch" href="/assets/js/21.db531af1.js"><link rel="prefetch" href="/assets/js/22.5e74cd7a.js"><link rel="prefetch" href="/assets/js/23.a066c173.js"><link rel="prefetch" href="/assets/js/24.63d59641.js"><link rel="prefetch" href="/assets/js/25.733dd08f.js"><link rel="prefetch" href="/assets/js/3.588e0ea5.js"><link rel="prefetch" href="/assets/js/4.32072f09.js"><link rel="prefetch" href="/assets/js/5.41d39ad3.js"><link rel="prefetch" href="/assets/js/6.67a6bd14.js"><link rel="prefetch" href="/assets/js/7.f2c1c925.js"><link rel="prefetch" href="/assets/js/9.58e3d592.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cec05db3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="七分熟" class="logo"> <span class="site-name can-hide">七分熟</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/echarts/" class="nav-link router-link-active">
+  echarts
+</a></li><li class="dropdown-item"><!----> <a href="/wx/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/el/" class="nav-link">
+  elementui
+</a></li></ul></div></div><div class="nav-item"><a href="/words/" class="nav-link">
+  留言
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/echarts/" class="nav-link router-link-active">
+  echarts
+</a></li><li class="dropdown-item"><!----> <a href="/wx/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/el/" class="nav-link">
+  elementui
+</a></li></ul></div></div><div class="nav-item"><a href="/words/" class="nav-link">
+  留言
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>echarts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/echarts/01echarts.html" class="sidebar-link">（一）echarts的基本配置</a></li><li><a href="/echarts/02echarts.html" class="sidebar-link">（二）折线图</a></li><li><a href="/echarts/03echarts.html" class="active sidebar-link">（三）饼形图</a></li><li><a href="/echarts/04echarts.html" class="sidebar-link">（四）横向柱状图</a></li><li><a href="/echarts/05echarts.html" class="sidebar-link">（五）地图</a></li><li><a href="/echarts/06echarts.html" class="sidebar-link">（六）竖向柱状图</a></li><li><a href="/echarts/" class="sidebar-link">官网</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h1> <p><img src="/assets/img/%E9%A5%BC%E5%BD%A2%E5%9B%BE.png" alt="avatar"></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">createEcharts</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> chart <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>mychart<span class="token punctuation">;</span>
+      <span class="token keyword">let</span> myChart <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>$echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>chart<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// 绘制图表</span>
+
+      myChart<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        color<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;#039BE5&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;#8BC34A&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;#FBC02D&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;#FF7043&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;#FFCCBC&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        title<span class="token operator">:</span> <span class="token punctuation">{</span>
+          text<span class="token operator">:</span> <span class="token string">&quot;南丁格尔玫瑰图&quot;</span><span class="token punctuation">,</span>
+          subtext<span class="token operator">:</span> <span class="token string">&quot;纯属虚构&quot;</span><span class="token punctuation">,</span>
+          left<span class="token operator">:</span> <span class="token string">&quot;center&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        tooltip<span class="token operator">:</span> <span class="token punctuation">{</span>
+          trigger<span class="token operator">:</span> <span class="token string">&quot;item&quot;</span><span class="token punctuation">,</span>
+          formatter<span class="token operator">:</span> <span class="token string">&quot;{a} &lt;br/&gt;{b} : {c} ({d}%)&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        legend<span class="token operator">:</span> <span class="token punctuation">{</span>
+          left<span class="token operator">:</span> <span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span>
+          top<span class="token operator">:</span> <span class="token string">&quot;bottom&quot;</span><span class="token punctuation">,</span>
+          itemWidth<span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">,</span>
+          itemHeight<span class="token operator">:</span><span class="token number">10</span><span class="token punctuation">,</span>
+          textStyle<span class="token operator">:</span><span class="token punctuation">{</span>
+            fontSize<span class="token operator">:</span><span class="token string">&quot;12&quot;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        toolbox<span class="token operator">:</span> <span class="token punctuation">{</span>
+          show<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          feature<span class="token operator">:</span> <span class="token punctuation">{</span>
+            mark<span class="token operator">:</span> <span class="token punctuation">{</span> show<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            dataView<span class="token operator">:</span> <span class="token punctuation">{</span> show<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> readOnly<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            magicType<span class="token operator">:</span> <span class="token punctuation">{</span>
+              show<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+              type<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;pie&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;funnel&quot;</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            restore<span class="token operator">:</span> <span class="token punctuation">{</span> show<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            saveAsImage<span class="token operator">:</span> <span class="token punctuation">{</span> show<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        series<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            name<span class="token operator">:</span> <span class="token string">&quot;地区分部&quot;</span><span class="token punctuation">,</span>
+            type<span class="token operator">:</span> <span class="token string">&quot;pie&quot;</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span><span class="token punctuation">{</span>
+              fontSize<span class="token operator">:</span><span class="token number">12</span><span class="token comment">//修改图形文字大小</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            labelLine<span class="token operator">:</span><span class="token punctuation">{</span><span class="token comment">//修改链接图形和文字的线条：length和length2</span>
+              length<span class="token operator">:</span><span class="token number">6</span><span class="token punctuation">,</span>
+              length<span class="token operator">:</span><span class="token number">8</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            radius<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'10%'</span><span class="token punctuation">,</span> <span class="token string">'70%'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//修改饼形图大小</span>
+            <span class="token comment">// roseType: &quot;area&quot;,//面积显示数据</span>
+            roseType<span class="token operator">:</span> <span class="token string">&quot;radius&quot;</span><span class="token punctuation">,</span><span class="token comment">//半径显示数据</span>
+            center<span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">'50%'</span><span class="token punctuation">,</span><span class="token string">'50%'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+            data<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">&quot;云南&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">26</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">&quot;北京&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">&quot;山东&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">&quot;河北&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">&quot;江苏&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">&quot;浙江&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">30</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">&quot;四川&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span> value<span class="token operator">:</span> <span class="token number">42</span><span class="token punctuation">,</span> name<span class="token operator">:</span> <span class="token string">&quot;湖北&quot;</span> <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;resize&quot;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        myChart<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2020年6月4日</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/echarts/02echarts.html" class="prev">
+        （二）折线图
+      </a></span> <span class="next"><a href="/echarts/04echarts.html">
+        （四）横向柱状图
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.fe254db9.js" defer></script><script src="/assets/js/2.dae41ef3.js" defer></script><script src="/assets/js/8.6f5bf118.js" defer></script>
+  </body>
+</html>

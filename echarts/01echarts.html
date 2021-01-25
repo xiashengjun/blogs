@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>（一）echarts的基本配置 | 七分熟</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="七分熟的第一个博客">
+    <link rel="preload" href="/assets/css/0.styles.cec05db3.css" as="style"><link rel="preload" href="/assets/js/app.fe254db9.js" as="script"><link rel="preload" href="/assets/js/2.dae41ef3.js" as="script"><link rel="preload" href="/assets/js/6.67a6bd14.js" as="script"><link rel="prefetch" href="/assets/js/10.dc0a1eaa.js"><link rel="prefetch" href="/assets/js/11.f5d53f0f.js"><link rel="prefetch" href="/assets/js/12.87277a04.js"><link rel="prefetch" href="/assets/js/13.164183b9.js"><link rel="prefetch" href="/assets/js/14.6ee89c0e.js"><link rel="prefetch" href="/assets/js/15.48878c38.js"><link rel="prefetch" href="/assets/js/16.bef41bc4.js"><link rel="prefetch" href="/assets/js/17.ddeb5c46.js"><link rel="prefetch" href="/assets/js/18.59988df5.js"><link rel="prefetch" href="/assets/js/19.540df982.js"><link rel="prefetch" href="/assets/js/20.887841cb.js"><link rel="prefetch" href="/assets/js/21.db531af1.js"><link rel="prefetch" href="/assets/js/22.5e74cd7a.js"><link rel="prefetch" href="/assets/js/23.a066c173.js"><link rel="prefetch" href="/assets/js/24.63d59641.js"><link rel="prefetch" href="/assets/js/25.733dd08f.js"><link rel="prefetch" href="/assets/js/3.588e0ea5.js"><link rel="prefetch" href="/assets/js/4.32072f09.js"><link rel="prefetch" href="/assets/js/5.41d39ad3.js"><link rel="prefetch" href="/assets/js/7.f2c1c925.js"><link rel="prefetch" href="/assets/js/8.6f5bf118.js"><link rel="prefetch" href="/assets/js/9.58e3d592.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cec05db3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="七分熟" class="logo"> <span class="site-name can-hide">七分熟</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/echarts/" class="nav-link router-link-active">
+  echarts
+</a></li><li class="dropdown-item"><!----> <a href="/wx/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/el/" class="nav-link">
+  elementui
+</a></li></ul></div></div><div class="nav-item"><a href="/words/" class="nav-link">
+  留言
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/echarts/" class="nav-link router-link-active">
+  echarts
+</a></li><li class="dropdown-item"><!----> <a href="/wx/" class="nav-link">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/el/" class="nav-link">
+  elementui
+</a></li></ul></div></div><div class="nav-item"><a href="/words/" class="nav-link">
+  留言
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>echarts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/echarts/01echarts.html" class="active sidebar-link">（一）echarts的基本配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/echarts/01echarts.html#_1-tooltip" class="sidebar-link">1.tooltip</a></li><li class="sidebar-sub-header"><a href="/echarts/01echarts.html#_2-legend" class="sidebar-link">2.legend</a></li><li class="sidebar-sub-header"><a href="/echarts/01echarts.html#_3-toolbox" class="sidebar-link">3.toolbox</a></li><li class="sidebar-sub-header"><a href="/echarts/01echarts.html#_4-grid" class="sidebar-link">4.grid</a></li><li class="sidebar-sub-header"><a href="/echarts/01echarts.html#_5-xaxis" class="sidebar-link">5.xAxis</a></li><li class="sidebar-sub-header"><a href="/echarts/01echarts.html#_6-title" class="sidebar-link">6.title</a></li><li class="sidebar-sub-header"><a href="/echarts/01echarts.html#_7-让图表跟随屏幕自适应" class="sidebar-link">7.让图表跟随屏幕自适应</a></li></ul></li><li><a href="/echarts/02echarts.html" class="sidebar-link">（二）折线图</a></li><li><a href="/echarts/03echarts.html" class="sidebar-link">（三）饼形图</a></li><li><a href="/echarts/04echarts.html" class="sidebar-link">（四）横向柱状图</a></li><li><a href="/echarts/05echarts.html" class="sidebar-link">（五）地图</a></li><li><a href="/echarts/06echarts.html" class="sidebar-link">（六）竖向柱状图</a></li><li><a href="/echarts/" class="sidebar-link">官网</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p><img src="/assets/img/%E9%85%8D%E7%BD%AE.png" alt="avatar"></p> <h1 id="echarts的基本配置"><a href="#echarts的基本配置" class="header-anchor">#</a> echarts的基本配置</h1> <h2 id="_1-tooltip"><a href="#_1-tooltip" class="header-anchor">#</a> 1.tooltip</h2> <blockquote><p>提示框组件</p> <blockquote><p>trigger触发方式</p></blockquote></blockquote> <h2 id="_2-legend"><a href="#_2-legend" class="header-anchor">#</a> 2.legend</h2> <blockquote><p>图例组件
+<code>legend:{ type:'plain', data:['销量1','销量2'] }</code>
+当series中有name值的时候，legend没有data值也会显示图例组件</p></blockquote> <h2 id="_3-toolbox"><a href="#_3-toolbox" class="header-anchor">#</a> 3.toolbox</h2> <blockquote><p>工具箱组件</p> <blockquote><p>可以实现另存为图片等功能
+feature:{
+saveAsImage:{}
+}</p></blockquote></blockquote> <h2 id="_4-grid"><a href="#_4-grid" class="header-anchor">#</a> 4.grid</h2> <blockquote><p>网格配置
+修改图表大小</p></blockquote> <p><code>grid:{ left:'0%', top:&quot;20px&quot;, right:&quot;0%&quot;, bottom:&quot;4%&quot;, containLabel:true }</code></p> <h2 id="_5-xaxis"><a href="#_5-xaxis" class="header-anchor">#</a> 5.xAxis</h2> <blockquote><p><code>splitLine: { lineStyle: { color: &quot;#317198&quot; } }, axisLine: { show: true, lineStyle: { color: &quot;#317198&quot; }</code></p> <blockquote><p>x轴标轴和x轴折线的样式</p></blockquote></blockquote> <blockquote><p><code>axisLabel: { color: &quot;#5FD3F9&quot;, padding: 5, fontSize: 16, padding:10, backgroundColor:{ image:require('../../assets/img/smallbox/下载.png') } }</code></p></blockquote> <h2 id="_6-title"><a href="#_6-title" class="header-anchor">#</a> 6.title</h2> <blockquote><p><code>title:{ text:'我的Echarts', left:'middle' }</code></p></blockquote> <h2 id="_7-让图表跟随屏幕自适应"><a href="#_7-让图表跟随屏幕自适应" class="header-anchor">#</a> 7.让图表跟随屏幕自适应</h2> <div class="language-js extra-class"><pre class="language-js"><code> window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;resize&quot;</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        mychart<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2020年6月4日</span></div></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/echarts/02echarts.html">
+        （二）折线图
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.fe254db9.js" defer></script><script src="/assets/js/2.dae41ef3.js" defer></script><script src="/assets/js/6.67a6bd14.js" defer></script>
+  </body>
+</html>

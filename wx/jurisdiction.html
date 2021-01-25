@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>（二）权限和交互提示框相关 | 七分熟</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    
+    <meta name="description" content="七分熟的第一个博客">
+    <link rel="preload" href="/assets/css/0.styles.cec05db3.css" as="style"><link rel="preload" href="/assets/js/app.fe254db9.js" as="script"><link rel="preload" href="/assets/js/2.dae41ef3.js" as="script"><link rel="preload" href="/assets/js/23.a066c173.js" as="script"><link rel="prefetch" href="/assets/js/10.dc0a1eaa.js"><link rel="prefetch" href="/assets/js/11.f5d53f0f.js"><link rel="prefetch" href="/assets/js/12.87277a04.js"><link rel="prefetch" href="/assets/js/13.164183b9.js"><link rel="prefetch" href="/assets/js/14.6ee89c0e.js"><link rel="prefetch" href="/assets/js/15.48878c38.js"><link rel="prefetch" href="/assets/js/16.bef41bc4.js"><link rel="prefetch" href="/assets/js/17.ddeb5c46.js"><link rel="prefetch" href="/assets/js/18.59988df5.js"><link rel="prefetch" href="/assets/js/19.540df982.js"><link rel="prefetch" href="/assets/js/20.887841cb.js"><link rel="prefetch" href="/assets/js/21.db531af1.js"><link rel="prefetch" href="/assets/js/22.5e74cd7a.js"><link rel="prefetch" href="/assets/js/24.63d59641.js"><link rel="prefetch" href="/assets/js/25.733dd08f.js"><link rel="prefetch" href="/assets/js/3.588e0ea5.js"><link rel="prefetch" href="/assets/js/4.32072f09.js"><link rel="prefetch" href="/assets/js/5.41d39ad3.js"><link rel="prefetch" href="/assets/js/6.67a6bd14.js"><link rel="prefetch" href="/assets/js/7.f2c1c925.js"><link rel="prefetch" href="/assets/js/8.6f5bf118.js"><link rel="prefetch" href="/assets/js/9.58e3d592.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cec05db3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="七分熟" class="logo"> <span class="site-name can-hide">七分熟</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/echarts/" class="nav-link">
+  echarts
+</a></li><li class="dropdown-item"><!----> <a href="/wx/" class="nav-link router-link-active">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/el/" class="nav-link">
+  elementui
+</a></li></ul></div></div><div class="nav-item"><a href="/words/" class="nav-link">
+  留言
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/react/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/question/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="更多" class="dropdown-title"><span class="title">更多</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/echarts/" class="nav-link">
+  echarts
+</a></li><li class="dropdown-item"><!----> <a href="/wx/" class="nav-link router-link-active">
+  微信小程序
+</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/el/" class="nav-link">
+  elementui
+</a></li></ul></div></div><div class="nav-item"><a href="/words/" class="nav-link">
+  留言
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>wx</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wx/" class="sidebar-link">（一）微信小程序基础</a></li><li><a href="/wx/jurisdiction.html" class="active sidebar-link">（二）权限和交互提示框相关</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wx/jurisdiction.html#_1-权限相关" class="sidebar-link">1.权限相关</a></li><li class="sidebar-sub-header"><a href="/wx/jurisdiction.html#_2-交互提示框相关" class="sidebar-link">2.交互提示框相关</a></li></ul></li><li><a href="/wx/map.html" class="sidebar-link">（三）腾讯地图开放平台快速入门</a></li><li><a href="/wx/request.html" class="sidebar-link">（四）网络请求</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1-权限相关"><a href="#_1-权限相关" class="header-anchor">#</a> 1.权限相关</h2> <h3 id="获取收货地址"><a href="#获取收货地址" class="header-anchor">#</a> 获取收货地址</h3> <p>wx.chooseAddress({})</p> <h3 id="获取向用户请求过的权限的状态"><a href="#获取向用户请求过的权限的状态" class="header-anchor">#</a> 获取向用户请求过的权限的状态</h3> <p>wx.getSetting({})</p> <h3 id="询问是否打开权限（之前询问过的）"><a href="#询问是否打开权限（之前询问过的）" class="header-anchor">#</a> 询问是否打开权限（之前询问过的）</h3> <p>wx.openSetting({})</p> <h3 id="获取当前位置信息"><a href="#获取当前位置信息" class="header-anchor">#</a> 获取当前位置信息</h3> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">getLocation</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> latitude <span class="token operator">=</span> res<span class="token punctuation">.</span>latitude<span class="token punctuation">;</span><span class="token comment">//获取当前纬度</span>
+      <span class="token keyword">const</span> longitude <span class="token operator">=</span> res<span class="token punctuation">.</span>longitude<span class="token comment">//获取当前经度</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">fail</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      wx<span class="token punctuation">.</span><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        title<span class="token operator">:</span> <span class="token string">'提醒'</span><span class="token punctuation">,</span>
+        content<span class="token operator">:</span> <span class="token string">'需要授权位置，否则无法使用此程序'</span><span class="token punctuation">,</span>
+        <span class="token function">success</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          wx<span class="token punctuation">.</span><span class="token function">openSetting</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token function">success</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="使用微信内置地图查看位置"><a href="#使用微信内置地图查看位置" class="header-anchor">#</a> 使用微信内置地图查看位置</h3> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">getLocation</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+ type<span class="token operator">:</span> <span class="token string">'gcj02'</span><span class="token punctuation">,</span> <span class="token comment">//返回可以用于wx.openLocation的经纬度</span>
+ <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">const</span> latitude <span class="token operator">=</span> res<span class="token punctuation">.</span>latitude
+   <span class="token keyword">const</span> longitude <span class="token operator">=</span> res<span class="token punctuation">.</span>longitude
+   wx<span class="token punctuation">.</span><span class="token function">openLocation</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     latitude<span class="token punctuation">,</span>
+     longitude<span class="token punctuation">,</span>
+     scale<span class="token operator">:</span> <span class="token number">18</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="获取用户信息"><a href="#获取用户信息" class="header-anchor">#</a> 获取用户信息</h3> <div class="language-js extra-class"><pre class="language-js"><code>app<span class="token punctuation">.</span>js里面
+ <span class="token comment">// 获取用户信息</span>
+    wx<span class="token punctuation">.</span><span class="token function">getSetting</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>authSetting<span class="token punctuation">[</span><span class="token string">'scope.userInfo'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框</span>
+          wx<span class="token punctuation">.</span><span class="token function">getUserInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+              <span class="token comment">// 可以将 res 发送给后台解码出 unionId</span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span>globalData<span class="token punctuation">.</span>userInfo <span class="token operator">=</span> res<span class="token punctuation">.</span>userInfo
+
+              <span class="token comment">// 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回</span>
+              <span class="token comment">// 所以此处加入 callback 以防止这种情况</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>userInfoReadyCallback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">userInfoReadyCallback</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  globalData<span class="token operator">:</span> <span class="token punctuation">{</span>
+    userInfo<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+    cartGoods_list<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">userInfoReadyCallback</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>globalData<span class="token punctuation">.</span>userInfo <span class="token operator">=</span> res<span class="token punctuation">.</span>userInfo<span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+其它页面
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">getApp</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="_2-交互提示框相关"><a href="#_2-交互提示框相关" class="header-anchor">#</a> 2.交互提示框相关</h2> <h3 id="显示消息提示框"><a href="#显示消息提示框" class="header-anchor">#</a> 显示消息提示框</h3> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token string">'成功'</span><span class="token punctuation">,</span>
+  icon<span class="token operator">:</span> <span class="token string">'success'</span><span class="token punctuation">,</span>
+  duration<span class="token operator">:</span> <span class="token number">2000</span><span class="token comment">//延迟的时间</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="显示模态对话框"><a href="#显示模态对话框" class="header-anchor">#</a> 显示模态对话框</h3> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token string">'提示'</span><span class="token punctuation">,</span>
+  content<span class="token operator">:</span> <span class="token string">'这是一个模态弹窗'</span><span class="token punctuation">,</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>confirm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户点击确定'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>cancel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'用户点击取消'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="显示-loading-提示框"><a href="#显示-loading-提示框" class="header-anchor">#</a> 显示 loading 提示框</h3> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">showLoading</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  title<span class="token operator">:</span> <span class="token string">'加载中'</span><span class="token punctuation">,</span>
+	mask<span class="token operator">:</span> ‘<span class="token boolean">true</span>’
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  wx<span class="token punctuation">.</span><span class="token function">hideLoading</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span>
+<span class="token comment">//通常  wx.hideLoading()放在wx.request中的complete中，当请求结束后才会结束提示框。</span>
+</code></pre></div><h3 id="从底部伸出菜单"><a href="#从底部伸出菜单" class="header-anchor">#</a> 从底部伸出菜单</h3> <div class="language-js extra-class"><pre class="language-js"><code>wx<span class="token punctuation">.</span><span class="token function">showActionSheet</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  itemList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'B'</span><span class="token punctuation">,</span> <span class="token string">'C'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>tapIndex<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">fail</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>errMsg<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><div class="custom-block danger"><p class="custom-block-title">WARNING</p> <p>1.wx.showLoading 和 wx.showToast 同时只能显示一个</p> <p>2.wx.showToast 应与 wx.hideToast 配对使用</p></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">2020年6月4日</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/wx/" class="prev router-link-active">
+        （一）微信小程序基础
+      </a></span> <span class="next"><a href="/wx/map.html">
+        （三）腾讯地图开放平台快速入门
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.fe254db9.js" defer></script><script src="/assets/js/2.dae41ef3.js" defer></script><script src="/assets/js/23.a066c173.js" defer></script>
+  </body>
+</html>
