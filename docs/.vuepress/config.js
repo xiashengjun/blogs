@@ -14,6 +14,10 @@ module.exports = {
         link: '/vue/'
       },
       {
+        text: 'React',
+        link: '/react/'
+      },
+      {
         text: '面试题',
         link: '/question/'
       },
